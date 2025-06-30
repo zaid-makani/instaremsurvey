@@ -6,15 +6,18 @@
       "use": "@vercel/next"
     }
   ],
-  "buildCommand": "npm install --legacy-peer-deps && npm run build",
+  "buildCommand": "npm install && npm run build",
   "outputDirectory": ".next",
-  "installCommand": "npm install --legacy-peer-deps",
+  "installCommand": "npm install",
   "framework": "nextjs",
   "regions": ["iad1"],
-  "routes": [
+  "rewrites": [
     {
-      "src": "/(.*)",
-      "dest": "/"
+      "source": "/(.*)",
+      "destination": "/"
     }
-  ]
+  ],
+  "env": {
+    "NODE_VERSION": "18.x"
+  }
 }
