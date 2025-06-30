@@ -1,0 +1,11 @@
+.git
+.gitignore
+.next
+node_modules
+*.log
+*.md
+.DS_Store
+.env*.local
+.vercel
+.vscode
+*.pem
